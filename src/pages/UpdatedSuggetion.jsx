@@ -181,87 +181,33 @@ const ResumeUploadAndSuggestions = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // const prompt = `
-    //   A student is seeking advice for choosing a university Based on the following student's data, suggest the top 3 universities for them.
-
-    //   Name: ${formData.name}
-    //   Email: ${formData.email}
-    //   Phone: ${formData.phone}
-    //   GPA: ${formData.gpa}
-    //   TOEFL: ${formData.toefl}
-    //   IELTS: ${formData.ielts}
-    //   SAT: ${formData.sat}
-    //   ACT: ${formData.act}
-    //   GRE: ${formData.gre}
-    //   Field: ${formData.field}
-    //   Major: ${formData.major}
-    //   Budget: ${formData.budget}
-    //   Career Path: ${formData.career}
-    //   Internship Preference: ${formData.internship ? "Yes" : "No"}
-    //   Research Opportunities: ${formData.research ? "Yes" : "No"}
-    //   Faculty Expertise: ${formData.faculty ? "Yes" : "No"}
-    //   Campus Safety: ${formData.safety ? "Yes" : "No"}
-
-    //   Resume Details: ${extractedText}
-
-    //   Please suggest 3 universities based on this information from the available university data: ${JSON.stringify(
-    //     universitydata.universities
-    //   )}.
-    // `;
-
     const prompt = `
-    I am seeking guidance for choosing the best universities based on my academic background, career goals, and preferred learning environment. Below is the relevant data to help you make the best recommendations.
+      A student is seeking advice for choosing a university Based on the following student's data, suggest the top 3 universities for them.
 
-    **Academic Background:**
-    - Name: ${formData.name}
-    - GPA: ${formData.gpa}
-    - TOEFL: ${formData.toefl}
-    - IELTS: ${formData.ielts}
-    - SAT: ${formData.sat}
-    - ACT: ${formData.act}
-    - GRE: ${formData.gre}
-    - Major: ${formData.major}
-    - Minor: ${formData.minor}
-    - Relevant Coursework/Research/Extracurriculars: ${extractedText}
+      Name: ${formData.name}
+      Email: ${formData.email}
+      Phone: ${formData.phone}
+      GPA: ${formData.gpa}
+      TOEFL: ${formData.toefl}
+      IELTS: ${formData.ielts}
+      SAT: ${formData.sat}
+      ACT: ${formData.act}
+      GRE: ${formData.gre}
+      Field: ${formData.field}
+      Major: ${formData.major}
+      Budget: ${formData.budget}
+      Career Path: ${formData.career}
+      Internship Preference: ${formData.internship ? "Yes" : "No"}
+      Research Opportunities: ${formData.research ? "Yes" : "No"}
+      Faculty Expertise: ${formData.faculty ? "Yes" : "No"}
+      Campus Safety: ${formData.safety ? "Yes" : "No"}
 
-    **Career Goals:**
-    - Desired Career Path(s): ${formData.career}
-    - Industry Preferences: ${formData.field}
-    - Internship Preference: ${formData.internship ? "Yes" : "No"}
-    - Research Opportunities: ${formData.research ? "Yes" : "No"}
-    - Faculty Expertise: ${formData.faculty ? "Yes" : "No"}
-    
-    **Preferred Learning Environment:**
-    - Desired Teaching Style: ${
-      formData.teachingStyle
-    } (e.g., lecture-based, discussion-based, project-based)
-    - Campus Size: ${formData.campusSize}
-    - Campus Culture: ${formData.campusCulture}
-    - Student Life and Extracurriculars: ${formData.studentLife}
-    - Campus Safety: ${formData.safety ? "Yes" : "No"}
+      Resume Details: ${extractedText}
 
-    **Geographic Preferences:**
-    - Preferred Location: ${formData.location}
-
-    **Budget Considerations:**
-    - Budget: ${formData.budget}
-
-    Based on the above data, please suggest 5 top universities that best match my profile.
-
-    Key Considerations:
-    - **Academic Reputation:** Prioritize universities with strong academic reputations in my field of interest.
-    - **Acceptance Rates and Financial Aid:** Consider universities with realistic acceptance rates and good financial aid options.
-    - **Teaching and Learning Environment:** Match the universities with my preferred teaching styles, campus size, culture, and student life.
-    - **Research and Internship Opportunities:** Ensure universities with ample research and internship opportunities that align with my career goals.
-
-    Additionally, please provide:
-    - Links to relevant resources for each university (e.g., website, virtual tours, student testimonials).
-    - Insights into each university's environment and its alignment with my academic and career goals.
-
-    Please suggest universities from the available data: ${JSON.stringify(
-      universitydata.universities
-    )}.
-`;
+      Please suggest 3 universities based on this information from the available university data: ${JSON.stringify(
+        universitydata.universities
+      )}.
+    `;
 
     // Submit the data and request suggestions
     const result = await model.generateContent(prompt);
@@ -275,6 +221,13 @@ const ResumeUploadAndSuggestions = () => {
   };
 
   const handleChat = async (query) => {
+    const model = genAI.getGenerativeModel({
+      model: "gemini-pro",
+      generationConfig: {
+        maxOutputTokens: 70,
+        temperature: 0.8,
+      },
+    });
     if (query.trim()) {
       // Add the user query to chat history immediately, before loading state
       setChatHistory((prev) => [...prev, { role: "user", content: query }]);
@@ -285,15 +238,37 @@ const ResumeUploadAndSuggestions = () => {
       setLoading(true);
 
       try {
-        const prompt = `
+        const prompt1 = `
           The user has been interacting with the chatbot. Here is the chat history, and university data so far:
           ${chatHistory.map((msg) => `${msg.role}: ${msg.content}`).join("\n")},
-          ${JSON.stringify(universitydata)}
-  
           The user just asked:
           User: ${query}
-  
+
           Based on the previous chat history and the university data provided earlier, generate an appropriate response for the user's query.
+        `;
+
+        const prompt = `
+        Hello! I'm here to help you explore foreign education opportunities. Whether you're just starting to research or you're ready to dive into specific universities, I can guide you through the process.
+         ${chatHistory.map((msg) => `${msg.role}: ${msg.content}`).join("\n")},
+        The user just asked:
+        User: ${query}
+         Based on the previous chat history and the university data provided earlier, generate an appropriate response for the user's query.
+        To give you the best advice, I’d love to know a bit more about your academic interests and goals. Please consider sharing the following details:
+        
+        **1. Academic Interests:**
+        - What major(s) are you interested in, and do you have any minors or specific areas of focus?
+        
+        **2. Career Goals:**
+        - What career path(s) or industries are you aiming for (e.g., technology, healthcare, finance)?
+        - Are there any countries or regions you're particularly interested in for studying?
+        
+        **3. Learning Environment:**
+        - Do you have preferences for class sizes or teaching styles (e.g., lecture-based, project-based, hands-on)?
+        - What are you hoping to find in terms of research opportunities or extracurricular activities?
+        
+        Don’t worry if you’re not sure of all the details yet—just share what you can, and we’ll figure it out together. If you’re just saying “hello” or want general guidance, I’m here to help with that as well!
+        
+        Looking forward to helping you find the best fit for your education abroad!
         `;
 
         const result = await model.generateContent(prompt);
