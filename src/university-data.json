@@ -1,0 +1,532 @@
+{
+  "universities": [
+    {
+      "university": "Massachusetts Institute of Technology (MIT)",
+      "state": "Massachusetts",
+      "rank": 1,
+      "listOfCourses": [
+        "Computer Science",
+        "Electrical Engineering",
+        "Mechanical Engineering",
+        "Economics",
+        "Business Administration"
+      ],
+      "minimumQualifications": "Bachelor's degree with a GPA of 3.5 or higher, GRE/GMAT for graduate programs, TOEFL/IELTS for non-native English speakers",
+      "fees": {
+        "semesterFees": 28000,
+        "courseFees": {
+          "Computer Science": 70000,
+          "Electrical Engineering": 65000,
+          "Economics": 55000
+        }
+      },
+      "facultySize": 1500,
+      "foreignStudentsEnrolled": 4500,
+      "stifund": "Up to $25,000 per year for research assistants",
+      "studentBenefits": [
+        "On-campus housing assistance",
+        "Health insurance",
+        "Career counseling services"
+      ],
+      "loansInfo": "Federal student loans and private education loans available"
+    },
+    {
+      "university": "Stanford University",
+      "state": "California",
+      "rank": 2,
+      "listOfCourses": [
+        "Artificial Intelligence",
+        "Civil Engineering",
+        "Business Management",
+        "Psychology",
+        "Data Science"
+      ],
+      "minimumQualifications": "Bachelor's degree with a GPA of 3.6 or higher, TOEFL/IELTS for international students",
+      "fees": {
+        "semesterFees": 30000,
+        "courseFees": {
+          "Artificial Intelligence": 75000,
+          "Civil Engineering": 62000,
+          "Business Management": 68000
+        }
+      },
+      "facultySize": 2000,
+      "foreignStudentsEnrolled": 5000,
+      "stifund": "Up to $28,000 for PhD students",
+      "studentBenefits": [
+        "Flexible payment plans",
+        "Research opportunities",
+        "Access to state-of-the-art labs"
+      ],
+      "loansInfo": "Federal loans, private loans, and institutional aid"
+    },
+    {
+      "university": "Harvard University",
+      "state": "Massachusetts",
+      "rank": 3,
+      "listOfCourses": [
+        "Law",
+        "Medicine",
+        "Business",
+        "Public Policy",
+        "Environmental Science"
+      ],
+      "minimumQualifications": "High GPA, relevant test scores, and strong letters of recommendation",
+      "fees": {
+        "semesterFees": 32000,
+        "courseFees": {
+          "Law": 68000,
+          "Medicine": 75000,
+          "Business": 70000
+        }
+      },
+      "facultySize": 2100,
+      "foreignStudentsEnrolled": 6000,
+      "stifund": "Research assistantship up to $30,000",
+      "studentBenefits": [
+        "Health insurance",
+        "Discounted transportation",
+        "Networking opportunities"
+      ],
+      "loansInfo": "Scholarships and private loans available"
+    },
+    {
+      "university": "California Institute of Technology (Caltech)",
+      "state": "California",
+      "rank": 4,
+      "listOfCourses": [
+        "Astrophysics",
+        "Chemical Engineering",
+        "Computer Science",
+        "Mathematics",
+        "Biology"
+      ],
+      "minimumQualifications": "Bachelor's degree with a GPA of 3.7, strong research background",
+      "fees": {
+        "semesterFees": 31000,
+        "courseFees": {
+          "Astrophysics": 72000,
+          "Chemical Engineering": 70000
+        }
+      },
+      "facultySize": 1200,
+      "foreignStudentsEnrolled": 3000,
+      "stifund": "$25,000 for teaching assistants",
+      "studentBenefits": [
+        "Collaborative research labs",
+        "Campus housing",
+        "Entrepreneurship programs"
+      ],
+      "loansInfo": "Education loans with low-interest rates"
+    },
+    {
+      "university": "University of Chicago",
+      "state": "Illinois",
+      "rank": 5,
+      "listOfCourses": [
+        "Economics",
+        "Sociology",
+        "Philosophy",
+        "Data Analytics",
+        "Political Science"
+      ],
+      "minimumQualifications": "Strong academic record and research experience",
+      "fees": {
+        "semesterFees": 29000,
+        "courseFees": {
+          "Economics": 68000,
+          "Philosophy": 58000
+        }
+      },
+      "facultySize": 1900,
+      "foreignStudentsEnrolled": 4000,
+      "stifund": "$20,000 annual stipend for qualified students",
+      "studentBenefits": [
+        "Advanced library resources",
+        "Networking events",
+        "Healthcare services"
+      ],
+      "loansInfo": "Federal student loans available"
+    },
+    {
+      "university": "University of Oxford",
+      "location": "Oxford, England",
+      "rank": 1,
+      "listOfCourses": [
+        "Computer Science",
+        "Electrical Engineering",
+        "Mathematics",
+        "Economics",
+        "Law",
+        "Medicine"
+      ],
+      "minimumQualifications": "A-levels or equivalent with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher in a related undergraduate degree",
+      "fees": {
+        "semesterFees": 15000,
+        "courseFees": {
+          "Computer Science": 26000,
+          "Electrical Engineering": 25000,
+          "Economics": 22000,
+          "Law": 26000
+        }
+      },
+      "facultySize": 2500,
+      "foreignStudentsEnrolled": 8000,
+      "stifund": "Up to £10,000 per year for postgraduate students through scholarships and assistantships",
+      "studentBenefits": [
+        "Access to world-class libraries and research facilities",
+        "Career services and mentorship programs",
+        "Cultural and social clubs and societies",
+        "Mental health and counseling services"
+      ],
+      "loansInfo": "Student loans available through the UK government for UK/EU students; international students may need to secure loans through private lenders"
+    },
+    {
+      "university": "University of Cambridge",
+      "location": "Cambridge, England",
+      "rank": 2,
+      "listOfCourses": [
+        "Physics",
+        "Computer Science",
+        "Engineering",
+        "Economics",
+        "Law",
+        "Biological Sciences"
+      ],
+      "minimumQualifications": "A-levels or equivalent with A*AA or higher, IELTS/TOEFL for non-native English speakers, 2:1 or higher for graduate applicants",
+      "fees": {
+        "semesterFees": 16000,
+        "courseFees": {
+          "Physics": 27000,
+          "Computer Science": 28000,
+          "Economics": 23000,
+          "Biological Sciences": 25000
+        }
+      },
+      "facultySize": 3000,
+      "foreignStudentsEnrolled": 9000,
+      "stifund": "Up to £15,000 per year for postgraduate students through fellowships",
+      "studentBenefits": [
+        "On-campus housing",
+        "Free access to university museums",
+        "Career coaching",
+        "Cultural integration support for international students"
+      ],
+      "loansInfo": "UK government loans for UK/EU students, private loans for international students"
+    },
+    {
+      "university": "Imperial College London",
+      "location": "London, England",
+      "rank": 3,
+      "listOfCourses": [
+        "Engineering",
+        "Physics",
+        "Mathematics",
+        "Chemistry",
+        "Business",
+        "Medicine"
+      ],
+      "minimumQualifications": "A-levels with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 17000,
+        "courseFees": {
+          "Engineering": 32000,
+          "Physics": 29000,
+          "Business": 33000,
+          "Medicine": 45000
+        }
+      },
+      "facultySize": 2500,
+      "foreignStudentsEnrolled": 7000,
+      "stifund": "Scholarships available up to £12,000 per year for research assistants",
+      "studentBenefits": [
+        "Excellent research facilities",
+        "Career guidance and networking events",
+        "International student support services",
+        "On-campus fitness and well-being centers"
+      ],
+      "loansInfo": "Loans available through UK government for UK/EU students, private loans for international students"
+    },
+    {
+      "university": "London School of Economics and Political Science (LSE)",
+      "location": "London, England",
+      "rank": 4,
+      "listOfCourses": [
+        "Economics",
+        "Political Science",
+        "International Relations",
+        "Law",
+        "Finance"
+      ],
+      "minimumQualifications": "A-levels with AAA, IELTS/TOEFL for non-native English speakers, Graduate applicants require a 2:1 or higher",
+      "fees": {
+        "semesterFees": 20000,
+        "courseFees": {
+          "Economics": 28000,
+          "Political Science": 26000,
+          "Finance": 32000
+        }
+      },
+      "facultySize": 1000,
+      "foreignStudentsEnrolled": 6000,
+      "stifund": "Up to £8,000 for postgraduate students",
+      "studentBenefits": [
+        "Career services and internship placements",
+        "Diverse student organizations",
+        "Mental health and well-being support",
+        "Networking events with industry professionals"
+      ],
+      "loansInfo": "Student loans through UK government for UK/EU students, private loans for international students"
+    },
+    {
+      "university": "University College London (UCL)",
+      "location": "London, England",
+      "rank": 5,
+      "listOfCourses": [
+        "Architecture",
+        "Psychology",
+        "Biology",
+        "Computer Science",
+        "Law"
+      ],
+      "minimumQualifications": "A-levels with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 16000,
+        "courseFees": {
+          "Architecture": 29000,
+          "Psychology": 25000,
+          "Biology": 24000,
+          "Law": 27000
+        }
+      },
+      "facultySize": 2000,
+      "foreignStudentsEnrolled": 6500,
+      "stifund": "Research assistantships and scholarships available up to £10,000",
+      "studentBenefits": [
+        "Flexible work-study options",
+        "On-campus fitness and wellness facilities",
+        "Extensive library resources",
+        "Counseling and support services"
+      ],
+      "loansInfo": "Student loans available for UK/EU students, private loans for international students"
+    },
+    {
+      "university": "University of Edinburgh",
+      "location": "Edinburgh, Scotland",
+      "rank": 6,
+      "listOfCourses": ["Biology", "Medicine", "History", "Law", "Physics"],
+      "minimumQualifications": "A-levels with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 13000,
+        "courseFees": {
+          "Biology": 23000,
+          "Medicine": 45000,
+          "History": 22000,
+          "Law": 25000
+        }
+      },
+      "facultySize": 1500,
+      "foreignStudentsEnrolled": 5500,
+      "stifund": "Up to £12,000 for postgraduate research students",
+      "studentBenefits": [
+        "On-campus housing and accommodation assistance",
+        "Diverse student community and societies",
+        "Career services and job fairs",
+        "Access to international student support"
+      ],
+      "loansInfo": "Government loans for UK/EU students, private loans for international students"
+    },
+    {
+      "university": "University of Manchester",
+      "location": "Manchester, England",
+      "rank": 7,
+      "listOfCourses": [
+        "Engineering",
+        "Law",
+        "Physics",
+        "Business",
+        "Philosophy"
+      ],
+      "minimumQualifications": "A-levels with AAB or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 14000,
+        "courseFees": {
+          "Engineering": 29000,
+          "Law": 26000,
+          "Business": 30000,
+          "Physics": 25000
+        }
+      },
+      "facultySize": 1800,
+      "foreignStudentsEnrolled": 6000,
+      "stifund": "Up to £10,000 for postgraduate students through scholarships",
+      "studentBenefits": [
+        "Career development workshops",
+        "Student well-being and counseling services",
+        "Cultural clubs and social events",
+        "On-campus health services"
+      ],
+      "loansInfo": "Student loans available for UK/EU students; private loans for international students"
+    },
+    {
+      "university": "University of Bristol",
+      "location": "Bristol, England",
+      "rank": 8,
+      "listOfCourses": [
+        "Engineering",
+        "Mathematics",
+        "Law",
+        "Biology",
+        "Psychology"
+      ],
+      "minimumQualifications": "A-levels with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 13000,
+        "courseFees": {
+          "Engineering": 28000,
+          "Mathematics": 24000,
+          "Law": 26000,
+          "Biology": 22000
+        }
+      },
+      "facultySize": 1600,
+      "foreignStudentsEnrolled": 5000,
+      "stifund": "Up to £8,000 for postgraduate research students",
+      "studentBenefits": [
+        "Industry partnerships for internships",
+        "Health and fitness services",
+        "Active student union and clubs",
+        "Career counseling and job search support"
+      ],
+      "loansInfo": "Government loans available for UK/EU students, private loans for international students"
+    },
+    {
+      "university": "University of Warwick",
+      "location": "Coventry, England",
+      "rank": 9,
+      "listOfCourses": [
+        "Mathematics",
+        "Engineering",
+        "Business",
+        "Computer Science",
+        "Law"
+      ],
+      "minimumQualifications": "A-levels with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 15000,
+        "courseFees": {
+          "Mathematics": 25000,
+          "Engineering": 27000,
+          "Business": 32000,
+          "Law": 26000
+        }
+      },
+      "facultySize": 2000,
+      "foreignStudentsEnrolled": 4000,
+      "stifund": "Up to £12,000 for postgraduate students through various scholarships",
+      "studentBenefits": [
+        "Cultural activities and events",
+        "On-campus counseling services",
+        "Personal development workshops",
+        "Career fairs and networking opportunities"
+      ],
+      "loansInfo": "UK government loans for UK/EU students, private loans for international students"
+    },
+    {
+      "university": "University of Glasgow",
+      "location": "Glasgow, Scotland",
+      "rank": 10,
+      "listOfCourses": [
+        "Medicine",
+        "Law",
+        "Psychology",
+        "Philosophy",
+        "Physics"
+      ],
+      "minimumQualifications": "A-levels with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 12000,
+        "courseFees": {
+          "Medicine": 40000,
+          "Law": 24000,
+          "Psychology": 22000,
+          "Physics": 23000
+        }
+      },
+      "facultySize": 1900,
+      "foreignStudentsEnrolled": 4500,
+      "stifund": "Research assistantships and scholarships available up to £10,000",
+      "studentBenefits": [
+        "Health services and counseling support",
+        "Networking events with alumni",
+        "Cultural clubs and societies",
+        "Study-abroad opportunities"
+      ],
+      "loansInfo": "Student loans available through UK government for UK/EU students; private loans for international students"
+    },
+    {
+      "university": "University of Leeds",
+      "location": "Leeds, England",
+      "rank": 11,
+      "listOfCourses": [
+        "Computer Science",
+        "Mathematics",
+        "Engineering",
+        "Business",
+        "Education"
+      ],
+      "minimumQualifications": "A-levels with AAB or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 13000,
+        "courseFees": {
+          "Computer Science": 26000,
+          "Engineering": 28000,
+          "Business": 29000,
+          "Education": 22000
+        }
+      },
+      "facultySize": 2100,
+      "foreignStudentsEnrolled": 5000,
+      "stifund": "Up to £8,000 for postgraduate students through departmental scholarships",
+      "studentBenefits": [
+        "On-campus accommodation assistance",
+        "Mental health support services",
+        "Career advice and job search support",
+        "Sports facilities"
+      ],
+      "loansInfo": "UK government loans for UK/EU students; private loans for international students"
+    },
+    {
+      "university": "King's College London",
+      "location": "London, England",
+      "rank": 12,
+      "listOfCourses": [
+        "Medicine",
+        "Law",
+        "Political Science",
+        "Biology",
+        "Business"
+      ],
+      "minimumQualifications": "A-levels with AAA or higher, IELTS/TOEFL for non-native English speakers, Graduate applicants need a 2:1 or higher",
+      "fees": {
+        "semesterFees": 16000,
+        "courseFees": {
+          "Medicine": 45000,
+          "Law": 27000,
+          "Political Science": 23000,
+          "Business": 31000
+        }
+      },
+      "facultySize": 1800,
+      "foreignStudentsEnrolled": 6500,
+      "stifund": "Up to £12,000 for postgraduate research students",
+      "studentBenefits": [
+        "Health and well-being services",
+        "Counseling and career guidance",
+        "Cultural activities and international student groups",
+        "On-campus fitness center"
+      ],
+      "loansInfo": "Government loans available for UK/EU students, private loans for international students"
+    }
+  ]
+}
