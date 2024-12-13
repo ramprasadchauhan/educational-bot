@@ -11,7 +11,7 @@ import { Link } from "react-router";
 const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY;
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({
-  model: "gemini-pro",
+  model: "gemini-1.5-flash-8b",
   generationConfig: {
     maxOutputTokens: 250,
     temperature: 0.8,
@@ -222,7 +222,7 @@ const ResumeUploadAndSuggestions = () => {
 
   const handleChat = async (query) => {
     const model = genAI.getGenerativeModel({
-      model: "gemini-pro",
+      model: "gemini-flash",
       generationConfig: {
         maxOutputTokens: 70,
         temperature: 0.8,
@@ -291,6 +291,8 @@ const ResumeUploadAndSuggestions = () => {
       }
     }
   };
+
+  console.log(chatHistory);
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
